@@ -1,0 +1,32 @@
+# Mark the current directory as the root
+root = true
+
+# General settings for all files
+[*]
+indent_style = space
+indent_size = 4
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Settings for JavaScript and TypeScript files
+[*.{js,jsx,ts,tsx}]
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+# Settings for JSON and YAML files (common in Node.js projects)
+[*.{json,yml,yaml}]
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+# Special settings for Markdown files
+[*.md]
+trim_trailing_whitespace = false
+max_line_length = off
+
+# Use tab indentation for Makefile
+[Makefile]
+indent_style = tab
