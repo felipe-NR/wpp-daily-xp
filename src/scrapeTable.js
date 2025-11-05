@@ -46,8 +46,6 @@ export async function scrapeHtmlTable(url, tableSelector) {
       tableData.push(rowData);
     });
 
-    const headers = ["KKs de XP 💸🤔", "Lvl 🆙", "Nick 📈"];
-
     // Ordena tableData pelo primeiro campo numérico de cada linha.
     // Para ordem decrescente (maior -> menor):
     tableData.sort((a, b) => b[0] - a[0]);
@@ -55,7 +53,7 @@ export async function scrapeHtmlTable(url, tableSelector) {
     // tableData.sort((a, b) => a[0] - b[0]);
     tableData.splice(6); // Mantém apenas os top 6
 
-    return { headers, tableData };
+    return { tableData };
   } catch (error) {
     console.error(`Error scraping table from ${url}:`, error);
     return null;
