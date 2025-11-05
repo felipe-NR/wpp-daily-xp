@@ -1,6 +1,10 @@
 import express from "express";
-const app = express();
 import { scrapeHtmlTable } from "./src/scrapeTable.js"; // Import the scrapeHtmlTable function
+import cors from "cors";
+
+const app = express();
+app.use(cors()); // default allows all origins
+
 const port = process.env.PORT || 3001;
 
 app.get("/generate-link", async (req, res) => {
